@@ -1,54 +1,100 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global News</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-</head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>News World</title>
+    <link rel="shortcut icon" href="Photos/World-News-Blogs.jpg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
 
 </head>
-<body>
 
-    <header class="container-fulid">
-        <nav class="navbar bg-light">
+<body class="container">
+
+
+    <!-- Navbar section start -->
+    <header class="pt-2">
+
+        <nav class="navbar bg-light ">
             <div class="container-fluid">
-              <a class="navbar-brand text-primary"> Global <button type="button" class="btn btn-primary ms-4">News</button></a>
-              
-    
-              <form class="d-flex" role="search">
-                <p class="text-primary fw-bold text text-decoration-underline">News</p>
-                <p class="ps-3 pe-3">Blog</p>
-              </form>
+                <a class="navbar-brand fs-3 fw-semibold"> <span class="bg-primary py-2 px-3 rounded-2">News</span> World
+                </a>
+                <form class="d-flex " role="search">
+
+                    <h3 class="mx-2 pt-2"> <a class="text-decoration-none" href="#">News</a> </h3>
+                    <h3 class="mx-3 pt-2"> <a id="blog" class="text-decoration-none" href="#">Blogs</a></h3>
+                    <a class="navbar-brand" href="#">
+                        <img class="rounded-pill" src="Photos/World-News-Blogs.jpg" alt="" width="60" height="50">
+                    </a>
+                </form>
             </div>
-            <hr class='fw-bold'>
-          </nav>
-          <nav id="news-container" class="navbar navbar-expand-lg bg-light">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Home</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  <a class="nav-link" href="#">Features</a>
-                  <a class="nav-link" href="#">Pricing</a>
-                  <a class="nav-link disabled">Disabled</a>
-                </div>
-              </div>
-            </div>
-          </nav>
-    
+        </nav>
+
     </header>
-    <main>
+    <hr>
+    <!-- navbar section end -->
+
+
+    <main class="py-3">
+        <!---JS Navbar Start -->
+        <div id="nav-container" class="row bg-success py-3 rounded-2 fw-semibold" style="--bs-bg-opacity: .5;">
+
+
+
+        </div>
+        <!---JS Navbar End -->
+       
+        <!-- spinner  -->
+        <div id="spinner" class="text-center py-4">
+            <div class="spinner-border text-info fs-3 fw-semibold d-none" role="status">
+                <span class="visually-hidden ">Loading...</span>
+            </div>
+        </div>
+
+
+        <!-- Categories section -->
+        <div class="py-5">
+            <div id="display-category">
+            </div>
+        </div>
+        
+       <!-- warning message -->
+        <div id="warning-massage" class="text-center text-warning d-none">
+            <h2 class="fs-1 fw-bold ">This News do not found !!</h2>
+        </div>
+       
+        <!--display details -->
+        <div id="details-body">
+        </div>
+        
+
+        <!-- Modal -->
+        <section>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div id="modal-body" class="modal-content">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- question  -->
+
+        <section id="question section" class="py-5 ">
+
+        </section>
 
     </main>
-    
-   
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-    <script src="js/news.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <script src="JS/news.js"></script>
 </body>
+
 </html>
