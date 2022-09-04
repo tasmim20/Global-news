@@ -107,13 +107,7 @@ const displayDetails = details => {
                 </div>
 
             `
-        displayCategory.appendChild(div)
-
-
-
-        console.log(element)
-
-
+        displayCategory.appendChild(div);
 
         // Modal section start ---------
 
