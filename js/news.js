@@ -108,6 +108,7 @@ const displayDetails = details => {
 
             `
         displayCategory.appendChild(div);
+        displayCategory.textContent = '';
 
         // Modal section start ---------
 
@@ -132,6 +133,8 @@ const displayDetails = details => {
                         </div>`
 
     });
+    
+
 
 }
 
@@ -153,7 +156,7 @@ const toggleSpinner = isLoading => {
 // bonus-part: blog Question
 
 document.getElementById('blog').addEventListener('click', function () {
-    const anserBody = document.getElementById('question section')
+    const anserBody = document.getElementById('question section');
     anserBody.textContent = '';
     const div = document.createElement('div');
     div.innerHTML = `
