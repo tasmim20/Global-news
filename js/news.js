@@ -66,10 +66,10 @@ const displayDetails = details => {
         div.innerHTML = `
                 <div class="card mb-4 shadow-lg">
                     <div class="row">
-                        <div class="col-md-4 p-5">
-                            <img class="text-center" src="${element.thumbnail_url}" style="height:300px;" class="img-fluid rounded-start" alt="...">
+                        <div class="col-md-4 col-sm-12 p-5">
+                            <img class="text-center" src="${element.thumbnail_url}" class="img-fluid rounded-start" alt="...">
                         </div>
-                        <div class="col-md-8 pb-2 pt-5 ">
+                        <div class="col-md-8 pt-5 pb-2">
                             <div class="card-body">
                                     <h3 class="card-title"> ${element.title}</h3>
                                     <p class="card-text"> ${element.details.slice(0, 350)}... </p>
@@ -108,6 +108,8 @@ const displayDetails = details => {
 
             `
         displayCategory.appendChild(div);
+
+        toggleSpinner(false);
        
 
         // Modal section start ---------
@@ -120,7 +122,7 @@ const displayDetails = details => {
                             
                         </div>
                         <div class="modal-body">
-                        <img class="text-center" src="${element.author.img}" style=" height: 200px; width: 200px;border-radius: 50%; margin-left:100px" class="img-fluid rounded-start" alt="...">
+                        <img class="text-center" src="${element.author.img}" style=" height: 200px; width: 200px; border-radius: 50%; margin-left:100px" class="img-fluid rounded-start" alt="...">
                             <h4>Rating : ${element.rating.number} </h4>
                             <h4>Badge : ${element.rating.badge} </h4>
                             <h4>Author : ${element.author.name ? element.author.name : 'name not found'} </h4>
@@ -141,13 +143,13 @@ const displayDetails = details => {
 //spinner ----------
 
 const toggleSpinner = isLoading => {
-    const loadingSection = document.getElementById('spinner');
+    const loaderSection = document.getElementById('spinner');
     if (isLoading) {
-        // loadingSection.classList.remove('d-none')
+        loaderSection.classList.remove('d-none')
 
     }
     else {
-        loadingSection.classList.add('d-none')
+        loaderSection.classList.add('d-none')
     }
 }
 
