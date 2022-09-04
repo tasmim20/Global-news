@@ -38,7 +38,7 @@ const displayDetails = details => {
 
 
 
-    // <<<<---------------------------- Found total Category section start  -------------------------------->
+    //a Found total Category section start  ------
     const displayTotalCategory = document.getElementById('display-category')
     const noFound = document.getElementById('warning-massage')
 
@@ -51,12 +51,12 @@ const displayDetails = details => {
 
     displayTotalCategory.innerHTML = `
                  <div class="py-4 ps-5 fs-3 p-2 bg-success text-dark bg-opacity-10 fw-semibold border border-info rounded-2">
-                     Total  ${detail.length} items producet found !!! 
+                     Total  ${detail.length} items found for this category  !!! 
                 </div>`
-    // <!---------------------------- Found total Category section end  -------------------------------->
+    // Found total Category section end------
 
 
-    //<<<<<----------------- Display Main News Card section --------------->>>>>>>
+    //Display News Card section 
 
     const displayCategory = document.getElementById('details-body')
     displayCategory.textContent = '';
@@ -66,33 +66,37 @@ const displayDetails = details => {
         div.innerHTML = `
                 <div class="card mb-4 shadow-lg">
                     <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-md-4 p-5">
                             <img class="text-center" src="${element.thumbnail_url}" style="height:300px;" class="img-fluid rounded-start" alt="...">
                         </div>
-                        <div class="col-md-9">
+                        <div class="col-md-8 pb-2 pt-5 ">
                             <div class="card-body">
-                                    <h3 class="card-title py-2"> ${element.title}</h3>
+                                    <h3 class="card-title"> ${element.title}</h3>
                                     <p class="card-text"> ${element.details.slice(0, 350)}... </p>
 
                                 
                                     <div class="d-flex d-inline-flex align-items-sm-start  justify-content-center mt-3">
-                                        <div class="mt-4"> 
-                                             <img class="rounded-pill" src="${element.author.img}" alt="" width="60" height="60">
-                                             <p class="lh-sm"> ${element.author.name ? element.author.name : 'name not found'}</p> 
+                                        <div class="mt-4 d-flex"> 
+                                             <img class="rounded-pill " src="${element.author.img}" alt="" width="60" height="60">
+                                             <p class="lh-sm pt-3 px-2"> ${element.author.name ? element.author.name : 'Author-name not found'}</p> 
                                         </div>
 
+                                     <div class="d-flex justify-content-center">
 
-                                        <div class=" mt-3 mx-5"> 
-                                        <img class="rounded-pill" src="Photos/download.png" alt=""  width="30" height="30" > <h4>${element.total_view ? element.total_view : 'not view found'}</h4>
-                                        </div>
+                                     
+                                     <div class=" mt-5 mx-5 d-flex"> 
+                                   <h5 class="pe-2"><span><i class="fa-regular fa-eye"></i></span></h5> 
+                                   <h5>${element.total_view ? element.total_view : 'not view found'}M</h5>
+                                     </div>
 
-                                        <div class="m-5 " > 
-                                        <button onclick="setDataById('${element.category_id}')"  type="button" class="btn btn-warning" data-bs-toggle="modal" 
-                                         data-bs-target="#exampleModal">Details</button>
-                                         </div>
+                                     <div class="p-5 me-5 "> 
+                                     <button onclick="setDataById('${element.category_id}')"  type="button" class="btn bg-white border-primary text-primary" data-bs-toggle="modal" 
+                                      data-bs-target="#exampleModal"> View Details</button>
+                                      </div>
 
-                                         
-                                     </button>
+                                      
+                                  </button>
+                                     </div>
 
 
                                     </div>
@@ -111,7 +115,7 @@ const displayDetails = details => {
 
 
 
-        // Modal section start ------------>>>>>>>
+        // Modal section start ---------
 
         const modalBody = document.getElementById('modal-body')
         modalBody.innerHTML = `
@@ -137,12 +141,7 @@ const displayDetails = details => {
 
 }
 
-
-
-
-
-
-// <<<<<<<<<<<<-----------spinner ------------>>>>>>>>>>>>
+//spinner ----------
 
 const toggleSpinner = isLoading => {
     const loadingSection = document.getElementById('spinner');
@@ -157,15 +156,14 @@ const toggleSpinner = isLoading => {
 
 
 
-// blog Question section strat---------------->>>>>
+// bonus-part: blog Question
 
 document.getElementById('blog').addEventListener('click', function () {
     const anserBody = document.getElementById('question section')
     anserBody.textContent = '';
-    const div = document.createElement('div')
-    div.classList.add('border')
+    const div = document.createElement('div');
     div.innerHTML = `
-    <h2> Q1.Differences between var, let, and const ?</h2>
+    <h4> Q1.Differences between var, let, and const ?</h4>
 
     <div class="container text-center ">
         <div class="row ">
@@ -197,7 +195,7 @@ document.getElementById('blog').addEventListener('click', function () {
 
 
     <div class="border py-3">
-        <h2>Q2. Why we use template String ?</h2>
+        <h4>Q2. Why we use template String ?</h4>
         <div class="shadow-lg m-2 p-4">
             <p>Template strings are a powerful feature of modern JavaScript released in ES6. It lets us insert/interpolate variables and expressions into strings without needing to concatenate like in older versions of JavaScript. It allows us to create strings that are complex and contain dynamic elements.
             .</p>
@@ -206,7 +204,7 @@ document.getElementById('blog').addEventListener('click', function () {
 
 
     <div class="border py-3">
-        <h2>Q3. Differences Between Arrow and Regular Functions ?</h2>
+        <h4>Q3. Differences Between Arrow and Regular Functions ?</h4>
         <div class="shadow-lg m-2 p-4">
             <p>
             Understanding the differences between regular and arrow functions helps choose the right syntax for specific needs.
