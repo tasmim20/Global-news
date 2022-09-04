@@ -50,8 +50,8 @@ const displayDetails = details => {
     }
 
     displayTotalCategory.innerHTML = `
-                 <div class="py-4 ps-5 fs-3 p-2 bg-success text-dark bg-opacity-10 fw-semibold border border-info rounded-2">
-                     Total  ${detail.length} items found for this category  !!! 
+                 <div class="py-4 ps-5 fs-4 p-2 bg-white  rounded-2 border border-info">
+                     Total  ${detail.length} items found for this category  !!!!!!
                 </div>`
     // Found total Category section end------
 
