@@ -108,7 +108,7 @@ const displayDetails = details => {
 
             `
         displayCategory.appendChild(div);
-        displayCategory.textContent = '';
+       
 
         // Modal section start ---------
 
@@ -165,7 +165,7 @@ document.getElementById('blog').addEventListener('click', function () {
     <div class="container text-center ">
         <div class="row ">
             <div class="col shadow-lg m-2">
-                <h3>Var</h3>
+                <h4>Var</h4>
                 <hr>
                 <p>The scope of a var variable is functional scope.</p>
                 <p>It can be updated and re-declared into the scope.</p>
@@ -173,14 +173,14 @@ document.getElementById('blog').addEventListener('click', function () {
 
             </div>
             <div class="col shadow-lg m-2">
-                <h3>Let</h3>
+                <h4>Let</h4>
                 <hr>
                 <p>The scope of a let variable is block scope.</p>
                 <p>It can be updated but cannot be re-declared into the scope.</p>
                 <p>It can be declared without initialization.</p>
             </div>
             <div class="col shadow-lg m-2">
-                <h3>Const</h3>
+                <h4>Const</h4>
                 <hr>
                 <p>The scope of a const variable is block scope.</p>
                 <p>It cannot be updated or re-declared into the scope.</p>
